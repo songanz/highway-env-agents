@@ -1,0 +1,1 @@
+docker build -t highway_env_agents:v1 .

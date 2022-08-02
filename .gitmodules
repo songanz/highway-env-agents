@@ -1,0 +1,9 @@
+[submodule "highway-env"]
+	path = highway-env
+	url = https://github.com/eleurent/highway-env.git
+[submodule "rl-agents"]
+	path = rl-agents
+	url = https://github.com/eleurent/rl-agents
+[submodule "stable-baselines3"]
+	path = stable-baselines3
+	url = https://github.com/DLR-RM/stable-baselines3.git
