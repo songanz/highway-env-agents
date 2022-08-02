@@ -6,12 +6,26 @@ LABEL maintainer="Songan Zhang <szhan117@ford.com>"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
+RUN rm /etc/apt/sources.list.d/cuda.list
+RUN rm /etc/apt/sources.list.d/nvidia-ml.list
 RUN apt-get update \
       && apt-get install --no-install-recommends --no-install-suggests -y gnupg2 ca-certificates \
-            git build-essential dirmngr nano \
+            git build-essential dirmngr nano libopenmpi-dev gcc swig dialog\
       && rm -rf /var/lib/apt/lists/*
 
 RUN echo "export PATH="/root/.local/bin:$PATH"" >> ~/.bashrc
+
+#
+# Install Git LFS
+#
+RUN apt-get update && \
+    apt-get install -y curl && \
+    curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
+    apt-get install -y git git-lfs && \
+    git lfs install && \
+    rm -rf /var/lib/apt/lists/* && \
+    apt-get -y autoclean && \
+    apt-get -y clean
 
 # nvidia
 ENV NVIDIA_VISIBLE_DEVICES \
@@ -36,8 +50,8 @@ RUN python3 -m pip install -r /tmp/requirements_2.txt
 RUN pip3 install --no-warn-script-location numpy scipy matplotlib ipython jupyter pandas sympy nose
 
 ### Final cleanup
-RUN sudo apt-get clean
-RUN sudo rm -rf /var/lib/apt/lists/*
+RUN apt-get clean
+RUN rm -rf /var/lib/apt/lists/*
 
 ### for display
 RUN echo "export QT_QPA_PLATFORM=xcb" >> ~/.bashrc
