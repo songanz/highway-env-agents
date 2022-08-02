@@ -1,3 +1,4 @@
+
 import sys
 import os
 highway_env_path = os.path.join(os.getcwd(), "highway-env")
@@ -10,11 +11,14 @@ sys.path.append(stable_baselines3_path)
 
 import gym
 import highway_env
+import stable_baselines3
+import rl_agents
 
 env = gym.make("highway-v0")
+env.reset()
 
 done = False
 while not done:
-    action = ... # Your agent code here
+    action = 0 # Your agent code here
     obs, reward, done, info = env.step(action)
-    env.render()
+    env.render(mode='rgb_array')

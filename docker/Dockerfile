@@ -10,7 +10,7 @@ RUN rm /etc/apt/sources.list.d/cuda.list
 RUN rm /etc/apt/sources.list.d/nvidia-ml.list
 RUN apt-get update \
       && apt-get install --no-install-recommends --no-install-suggests -y gnupg2 ca-certificates \
-            git build-essential dirmngr nano libopenmpi-dev gcc swig dialog\
+            git build-essential dirmngr nano libopenmpi-dev gcc swig dialog python-opengl python3-pip python3-dev\
       && rm -rf /var/lib/apt/lists/*
 
 RUN echo "export PATH="/root/.local/bin:$PATH"" >> ~/.bashrc
@@ -34,7 +34,6 @@ ENV NVIDIA_DRIVER_CAPABILITIES \
     ${NVIDIA_DRIVER_CAPABILITIES:+$NVIDIA_DRIVER_CAPABILITIES,}graphics
 
 ### Install Pytorch 1.7.0
-RUN apt update && apt install -y python3-pip python3-dev && rm -rf /var/lib/apt/lists/*
 RUN pip3 install --no-warn-script-location torch==1.7.0+cu110 torchvision==0.8.1+cu110 torchaudio==0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
 
 ### Install Openai gym

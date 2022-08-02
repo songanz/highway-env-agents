@@ -4,6 +4,8 @@ jupyter
 scipy 
 matplotlib 
 mpi4py
+cython
+lockfile
 
 # Deep learning
 tensorflow 
