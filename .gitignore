@@ -1,3 +1,6 @@
+# Output
+outputs/
+
 # VSCode
 .vscode/*
 !.vscode/settings.json
