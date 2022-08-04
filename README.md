@@ -1,5 +1,5 @@
 # highway-env&agents
-A collection of environments for *autonomous driving* and RL agents for decision making
+A collection of environments for *autonomous driving* and *RL agents* for decision making
 
 ## 1. Installation
 1. Builder docker using docker file
