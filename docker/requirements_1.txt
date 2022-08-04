@@ -6,6 +6,9 @@ matplotlib
 mpi4py
 cython
 lockfile
+docopt
+seaborn
+numba
 
 # Deep learning
 tensorflow 
@@ -13,6 +16,7 @@ keras
 h5py 
 keras-rl
 baselines
+tensorboardX
 
 # AI Gym requirements
 PyOpenGL

@@ -2,10 +2,8 @@
 import sys
 import os
 highway_env_path = os.path.join(os.getcwd(), "highway-env")
-rl_agents_path = os.path.join(os.getcwd(), "rl-agents")
-stable_baselines3_path = os.path.join(os.getcwd(), "stable-baselines3")
 sys.path.append(highway_env_path)
-sys.path.append(rl_agents_path)
+stable_baselines3_path = os.path.join(os.getcwd(), "stable-baselines3")
 sys.path.append(stable_baselines3_path)
 
 import time
@@ -17,8 +15,6 @@ import stable_baselines3
 from stable_baselines3.common.callbacks import CheckpointCallback, CallbackList, EvalCallback
 from stable_baselines3.common.logger import configure
 from stable_baselines3.common.monitor import Monitor
-
-from rl_agents import *
 
 if __name__=="__main__":
     # todo: set arg parser

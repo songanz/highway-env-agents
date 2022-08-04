@@ -39,13 +39,22 @@ while not done:
 ```
 
 ### 4.2 Training
+1. stable_baselines3
 Please check script `train.py` which is setup using stable_baselines3
+2. rl_agents
+Please check bash script `train_rl_agents.sh` for setting up training using rl_agents
 
 ### 4.3 Plot training curve
+1. stable_baselines3
 Please check script `plot.py`
+2. rl_agents
+TBD
 
 ### 4.4 Load trained policy
+1. stable_baselines3
 Please check script `ani.py`
+2. rl_agents
+TBD
 
 ## Reference 
 [Gym Documentation](https://www.gymlibrary.ml/)
