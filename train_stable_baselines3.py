@@ -25,7 +25,7 @@ if __name__=="__main__":
     model_ = getattr(stable_baselines3, algo_name)
     model = model_("MlpPolicy", env, verbose=1)
 
-    base_folder = os.path.join("./outputs/stable_baseline_3/", env_name, algo_name)
+    base_folder = os.path.join("./out/stable_baseline_3/", env_name, algo_name)
     log_dir = os.path.join(base_folder, time.strftime('%Y-%m-%d_%H-%M-%S'))
     model_path = os.path.join(log_dir, 'model/')
     os.makedirs(model_path, exist_ok=True)

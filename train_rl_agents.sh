@@ -1,1 +1,1 @@
-python3 train_rl_agents.py evaluate rl-agents/scripts/configs/HighwayEnv/env.json rl-agents/scripts/configs/HighwayEnv/agents/DQNAgent/ddqn.json --train --episodes=500
+python3 train_rl_agents.py evaluate configs/HighwayEnv/env.json configs/HighwayEnv/agents/DQNAgent/ddqn.json --train --episodes=500
