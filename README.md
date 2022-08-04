@@ -24,8 +24,13 @@ This repo include two popular RL library as sub modules:
 Please refer to the readme of the original sub modules
 
 ## 4. Examples
-### 4.1 Simple Usage
+### 4.1 Simple Usage of highway-env
 ```python
+import sys
+import os
+highway_env_path = os.path.join(os.getcwd(), "highway-env")
+sys.path.append(highway_env_path)
+
 import gym
 import highway_env
 
