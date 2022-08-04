@@ -8,12 +8,13 @@ cd docker
 ./build_docker.sh
 ```
 2. After successfully build the docker 
+
 in docker folder, run: 
 ```sh
 ./run_container.sh
 ```
 ## 2. The environments
-Please check readme of sub module highway-evn
+Please check the readme of sub module highway-env
 
 ## 3. The RL agents
 This repo include two popular RL library as sub modules:
