@@ -6,8 +6,8 @@ LABEL maintainer="Songan Zhang <szhan117@ford.com>"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN rm /etc/apt/sources.list.d/cuda.list
-RUN rm /etc/apt/sources.list.d/nvidia-ml.list
+# RUN rm /etc/apt/sources.list.d/cuda.list
+# RUN rm /etc/apt/sources.list.d/nvidia-ml.list
 RUN apt-get update \
       && apt-get install --no-install-recommends --no-install-suggests -y gnupg2 ca-certificates python3-tk ffmpeg\
             git build-essential dirmngr nano libopenmpi-dev gcc swig dialog python-opengl python3-pip python3-dev\
